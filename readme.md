@@ -1,7 +1,6 @@
 ASPECT BASED SENTIMENT ANALYSIS
 
-Team members- Osheen Mohan PANNIKOTE, Srijan GOYAL, Sunjidma SHAGDARSUREN, Vaibhav N SABHAHIT.
-Prerequisites
+##Prerequisites
 Install below packages:
 •	scipy
 •	Pandas
@@ -13,11 +12,12 @@ Install below packages:
 •	warnings
 
 Steps of the model
+```
 Documents -> Preprocessing -> Feature engineering -> Machine Learning model -> Calculate accuracy
-
+```
 ************************************************************************************************************************************************************
 
-PREPROCESSING
+##PREPROCESSING
 
 review_new - In this part, we created "raw_to_tokens" and "normalize_accent" function to clean review text. 
 First we normalized accents then move on to removing the punctuations present in the text. 
@@ -28,7 +28,7 @@ However, this was reducing the accuracy and taking away the context of the words
 
 ************************************************************************************************************************************************************
 
-FEATURE ENGINEERING
+##FEATURE ENGINEERING
 
 We created below features which went a long way in contributing towards the accuracy we finally obtained. 
 
@@ -74,7 +74,7 @@ SVM classification
 For the classification purpose we have used SVM classifier. After performing a hyper parameter grid search we found the optimal parameters to be XX.
 
 ************************************************************************************************************************************************************
-Functions and purpose
+##Functions and purpose
 
 1)normalize_accent(self, string)- Remove any accent present in the review column 
 2)raw_to_tokens(self, raw_string)- Preprocess the text, normalizing the accent and removing punctiations. Also converts shorthands to full forms
@@ -87,7 +87,7 @@ Functions and purpose
 
 ***************************************************************************************************************************************
 **********************************
-ACCURACY of VARIOUS MODELS
+##ACCURACY of VARIOUS MODELS
 
 Some other models we have tested
 Model	Accuracy on dev data
@@ -105,14 +105,14 @@ dataset, we decided to keep Stacking Classifier as the best models. We performed
 
 ************************************************************************************************************************************************************
   
-ACCURACY ON DEVDATA
+##ACCURACY ON DEVDATA
 Accuracy- On dev data
 After training SVM classifier on the train data, we predict using devdata and get accuracy of 81.12%.
 
 
 **********************************************************************************************************************************************************
 
-REFERENCES
+##REFERENCES
 1. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 2. Sundermeyer, M., Schlüter, R., & Ney, H. (2012). LSTM neural networks for language modeling. In Thirteenth annual conference of the international speech communication association.
 3. https://datasciencetoday.net/index.php/en-us/tutorials-top/162-sentiment-analysis-using-python-part-ii-doc2vec-vs-word2vec
